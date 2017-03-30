@@ -1,0 +1,24 @@
+
+input{
+  width: 75%;
+  margin-left: 1%;
+  border-radius: 0;
+  box-shadow: true;
+  font-family: serif;
+}
+/* app css stylesheet */
+.hoverwell:hover {
+  background-color: #bbb;
+}
+.well{
+  background-color: #485563;
+  margin-top: 6%;
+}
+.submitbtn{
+  background-color: #485563;
+  margin-left: 2%;
+  width:30%;
+}
+h1{
+  font-family: fantasy;
+}

@@ -1,0 +1,55 @@
+.panel{
+    width: 50%;
+    margin-top: 5%;
+    border: 0;
+    inline: block;
+}
+.panel-heading{
+   background-color: #485655;
+   color: white;
+}
+/* app css stylesheet */
+
+.panel-body{
+  color: black;
+}
+.well{
+  background-color: #485563;
+  margin-top: 6%;
+  font-family: serif;
+}
+/* app css stylesheet */
+.hoverwell:hover {
+  background-color: #aaa;
+  color: black;
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+
+
+button {
+  color: black;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: #ccc;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.green{
+  color: green !important;
+}
+
+.red{
+  color: red;
+}
+
+h1{
+  font-family: fantasy;
+}

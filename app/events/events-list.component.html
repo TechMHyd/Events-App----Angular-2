@@ -1,0 +1,13 @@
+<div class="row">
+  <h1>Upcoming  Events  Preview</h1>
+  <button class="btn btn-primary pull-right" (click)="addNew()">Add New</button>
+  <div class="col-md-5" *ngFor ="let event of eventsList" [routerLink]="['/listviewone',event.eventId]">
+    <div class="well hoverwell thumbnail">
+        <h2>{{event.eventName}}</h2>
+        <div [style.color]="event.eventId === 'CA12' ? 'green' : 'red'">Event Id: {{event.eventId}}</div>
+        <div>When: {{event.eventDate}} </div>
+        <div>Where: {{event.eventPlace}}</div>
+    </div>
+
+  </div>
+</div>

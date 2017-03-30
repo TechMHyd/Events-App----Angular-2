@@ -1,0 +1,41 @@
+<div class="row">
+<h1> Add Your Events</h1>
+<div *ngIf="evntid.errors && (evntid.dirty || evntid.touched)"
+     class="alert alert-danger alert-dismissable fade in" style="position: fixed; bottom: 0; right: 1%">
+  <div [hidden]="!evntid.errors.required">
+    Event Id is required
+    </div>
+</div>
+<div *ngIf="name.errors && (name.dirty || name.touched)"
+     class="alert alert-danger alert-dismissable fade in" style="position: fixed; bottom: 0; right: 1%">
+    <div [hidden]="!name.errors.required">
+      Event Name is required
+    </div>
+</div>
+<div *ngIf="date.errors && (date.dirty || date.touched)"
+     class="alert alert-danger  alert-dismissable fade in" style="position: fixed; bottom: 0; right: 1%">
+    <div [hidden]="!date.errors.required">
+      Event Date is required
+    </div>
+</div>
+<div *ngIf="place.errors && (place.dirty || place.touched)"
+     class="alert alert-danger alert-dismissable fade in" style="position: fixed; bottom: 0; right: 1%">
+    <div [hidden]="!place.errors.required">
+      Event Place is required
+    </div>
+</div>
+<div class="well thumbnail">
+  <h3>Add</h3>
+  <form #personForm="ngForm">
+    <input type="text" class="form-control" name="eventId" [(ngModel)]="eventId" placeholder="Event ID" #evntid="ngModel" required="true"><br>
+    <input type="text" class="form-control" [(ngModel)]="eventName" name="eventName" placeholder="Event Name" #name="ngModel" required="true"><br>
+    <input type="text" class="form-control" [(ngModel)]="eventDate" name="eventDate" placeholder="Event Date" #date="ngModel" required="true"><br>
+    <input type="text" class="form-control" [(ngModel)]="eventPlace" name="eventPlace" placeholder="Event Place" #place="ngModel" required="true"><br>
+    <div class="row">
+        <div class="col-sm-7 pull-left">
+          <button class="btn btn-warning submitbtn" [disabled]="!personForm.form.valid" (click)="submitNew()">Submit</button>
+          <button class="btn btn-warning" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</form>
+</div>
